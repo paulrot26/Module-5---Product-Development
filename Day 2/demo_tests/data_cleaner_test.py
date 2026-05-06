@@ -17,5 +17,3 @@ class TestDataCleaning(unittest.TestCase):
 #test data is valid
     def test_days_between_correct_value(self):
         self.assertEqual(self.cleaned.loc[0, "Days Between"],9)
-
-
