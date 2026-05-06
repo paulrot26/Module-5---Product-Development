@@ -14,15 +14,16 @@ df["Books"]
 df = df.dropna(subset=["Books"])
 df1 = df1.dropna()
 
+#cleaning date in Book checkout column, removing "" from date and changin datatype to datetime
 df["Book checkout"] = df["Book checkout"].replace({'"': ''}, regex=True)
+df["Book checkout"] = pd.to_datetime(df["Book checkout"], errors="coerce")
 
-df["Book checkout_valid"] = pd.to_datetime(df["Book checkout"], errors="coerce")
-
+#converting to datetime
 df["Book checkout"] = pd.to_datetime(df["Book checkout"], errors="coerce")  
 df["Book Returned"] = pd.to_datetime(df["Book Returned"], errors="coerce")
 
+#creating column with date book is to be returned by and changing datatype to datetime
 df["Book Due Back"] = df["Book checkout"] + pd.Timedelta(days=14)
-
 df["Book Due Back"] = pd.to_datetime(df["Book Due Back"], errors="coerce")
 
 df["Overdue"] = df["Book Returned"] > df["Book Due Back"]
