@@ -50,9 +50,6 @@ class TestDateData(unittest.TestCase):
         self.assertEqual(df_local["Days_Between"].nunique(), 1)
         self.assertEqual(df_local["Days_Between"].iloc[0], 14)
 
-    
-
-
 if __name__ == "__main__":
     unittest.main()
 
