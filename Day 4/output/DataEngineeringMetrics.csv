@@ -1,0 +1,3 @@
+dataset,rows_before,rows_after,rows_removed,nulls_before,nulls_after,duplicates_before,duplicates_after,columns,memory_mb,invalid_checkout_dates,invalid_return_dates,overdue_count,loan_duration_min,loan_duration_max,loan_duration_avg
+books,114,20,94,560,4,92,0,10,0.004,1.0,0.0,5.0,-14617.0,30.0,-762.63
+customers,9,8,1,2,0,0,0,2,0.001,,,,,,
